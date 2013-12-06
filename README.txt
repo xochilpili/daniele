@@ -25,6 +25,8 @@ To do this please follow this instructions:
 		Edit this line in the file mentioned with your own credentials.
 
 	2.- Connect to your MySQL database engine and type :
+		mysql_shell>> create database testDaniele;
+		mysql_shell>> use testDaniele;
 		mysql_shell>> source testDaniele.db.sql
 		this should be enough to have the database schema to run this application.
  
