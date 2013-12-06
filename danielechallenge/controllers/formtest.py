@@ -32,7 +32,7 @@ class FormtestController(BaseController):
 	dep=request.params['apartment']
 	fech=request.params['dof']
 	sal=request.params['salario']
-	engine = create_engine('mysql://root:x0chetzalt@localhost/testDaniele?charset=utf8&use_unicode=0', pool_recycle=3600)
+	engine = create_engine('mysql://root:password@localhost/testDaniele?charset=utf8&use_unicode=0', pool_recycle=3600)
         connection = engine.connect()
         result = engine.execute(""" insert into cat_employees values (null,%s,%s,%s,%s,%s,%s);""",dep,nom,mail,"password",fech,sal)
 	#return 'Your data is: %s' % nom + ' email: %s ' % mail + ' department: %s ' % dep + ' fech: %s ' % fech + ' Salary: %s ' % sal
@@ -42,7 +42,7 @@ class FormtestController(BaseController):
     def list(self):
 	str=""
 	counter=1
-	engine = create_engine('mysql://root:x0chetzalt@localhost/testDaniele?charset=utf8&use_unicode=0', pool_recycle=3600)
+	engine = create_engine('mysql://root:password@localhost/testDaniele?charset=utf8&use_unicode=0', pool_recycle=3600)
 	connection = engine.connect()
 	# i did not realize how can i convert date string from database to datetime object in python. Well i did it, but get some compilance error, so i prefer to do it from the query... 
 	result = engine.execute("""select cat_employees.nombre,cat_employees.email,date_format(cat_employees.fech_birth, '%%d/%%m/%%Y') as fech_birth, cat_employees.salario, cat_apartments.description from cat_employees inner join cat_apartments on cat_employees.id_apartment=cat_apartments.id_apartment order by cat_employees.nombre""")

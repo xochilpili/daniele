@@ -16,6 +16,8 @@ Tweak the config file as appropriate and then setup the application::
 
     paster setup-app config.ini
 
+Libraries : SQLAlchemy + MySQLdb
+
 This contains a MySQL Schema database stored in a file called : testDaniele.db.sql
 So, it's important to change the user && password --credentials-- to connect to your own mysqld (server)
 To do this please follow this instructions:
@@ -29,6 +31,8 @@ To do this please follow this instructions:
 		mysql_shell>> use testDaniele;
 		mysql_shell>> source testDaniele.db.sql
 		this should be enough to have the database schema to run this application.
+
+For testing proposes i made some python script called ex2.py, please run it first in order to know that everything is working.
  
 Then you are ready to go.
 

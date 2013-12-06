@@ -8,7 +8,7 @@ import datetime
 from sqlalchemy import *
 from datetime import datetime
 
-engine = create_engine('mysql://root:x0chetzalt@localhost/testDaniele?charset=utf8&use_unicode=0', pool_recycle=3600)
+engine = create_engine('mysql://root:password@localhost/testDaniele?charset=utf8&use_unicode=0', pool_recycle=3600)
 connection = engine.connect()
 result = engine.execute("""select nombre,email,date_format(fech_birth,'%%d/%%m/%%Y') as fech_birth,salario from cat_employees""")
 for row in result:
