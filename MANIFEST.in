@@ -1,0 +1,3 @@
+include danielechallenge/config/deployment.ini_tmpl
+recursive-include danielechallenge/public *
+recursive-include danielechallenge/templates *
