@@ -25,6 +25,7 @@ class FormtestController(BaseController):
         return render('/derived/page/simpleform.html')
 
     def submit(self):
+	#since i did not realize how to use the "connect" && "engine" global declared var in development.ini i have to use this every single time (fuck me)
 	str=""
 	nom=request.params['name']
 	mail=request.params['email']
