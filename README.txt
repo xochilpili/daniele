@@ -30,6 +30,8 @@ To do this please follow this instructions:
  
 Then you are ready to go.
 
+Once you're in your webserver please see this using: http://yourServer_dns_or_ip/~yourInstalationPath/formtest/index 
+
 Thanks
 
 xOCh
